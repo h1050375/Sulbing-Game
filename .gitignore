@@ -1,0 +1,33 @@
+# Dependencies and generated output
+node_modules/
+dist/
+build/
+out/
+coverage/
+.cache/
+outputs/
+
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Local deployment tools and research downloads
+.openai/
+.sites-*/
+menu-reference.html
+*.local.json
+*.local
+*.log
+*.tar
+*.tar.gz
+*.zip
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini

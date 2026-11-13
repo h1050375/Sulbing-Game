@@ -1,0 +1,15 @@
+{
+  "name": "sulbing-game",
+  "version": "1.0.0",
+  "private": true,
+  "description": "설빙 CEO 프로젝트 — 비공식 빙수 만들기 웹게임",
+  "scripts": {
+    "build": "node scripts/build.cjs",
+    "test": "node test.cjs",
+    "prestart": "npm run build",
+    "start": "node server.cjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
