@@ -60,6 +60,21 @@ git push -u origin main
 GitHub 로그인 또는 인증이 필요할 수 있습니다. 원격에 별도 커밋이 있어 push가 거절되면
 강제 push하지 말고 먼저 원격 이력을 확인하세요.
 
+## GitHub Pages 자동 배포
+
+사이트 주소: <https://h1050375.github.io/Sulbing-Game/>
+
+`.github/workflows/deploy-pages.yml`은 `main`에 push할 때와 수동 실행 시 동작합니다.
+Node.js 22로 게임 검사를 실행하고 `scripts/build.cjs`로 생성한 `dist/`만
+GitHub Pages artifact로 업로드한 다음 `github-pages` 환경에 배포합니다.
+의존성 설치나 저장소에 `dist/`를 커밋하는 작업은 필요하지 않습니다.
+
+저장소 Settings → Pages → Build and deployment의 Source는 **GitHub Actions**를 사용합니다.
+배포 상태는 저장소 Actions의 **Deploy game to GitHub Pages**에서 확인할 수 있습니다.
+
+프로젝트의 CSS·JavaScript·로컬 이미지 경로는 상대 경로이므로 `/Sulbing-Game/` 아래에서도
+동작합니다. 별도 base 경로를 추가하거나 게임 코드를 수정할 필요가 없습니다.
+
 ## 자료 출처와 확인 한계
 
 메뉴·가격·사진 출처 및 게임 내부 확률 설정은 게임의 ‘출처’ 화면에서 확인할 수 있습니다.
